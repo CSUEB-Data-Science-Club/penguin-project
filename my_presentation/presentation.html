@@ -187,6 +187,18 @@ All together a total &lt;span style="color:red;font-weight:bold"&gt;52&lt;/span&
 
 ---
 
+# Crosstalk ? CROSSTALK ! 
+
+.pull-left[
+&lt;img src="images/crosstalk_argument0.jpg" width="300"&gt;
+]
+
+.pull-right[
+&lt;img src="images/crosstalk_argument1.jpg" width="400"&gt;
+]
+
+---
+
 .pull-left[
 # Control Document
 ## - Modulaize Tasks
@@ -772,6 +784,67 @@ The downy chicks gather into a group called a crèche to keep each other warm.
 They will start to hunt at about 9 weeks old once their down has been replaced with waterproof feathers.
 ````
 
+]
+
+---
+
+### `whisker` function
+
+
+```code
+use_penguin_template &lt;- function(species, long_prose){
+  
+  raw_rmd &lt;- readLines("penguin-whisker.Rmd")
+  
+  filled_rmd &lt;- whisker::whisker.render(raw_rmd)
+  
+  writeLines(
+    text = filled_rmd,
+    con = glue::glue("{species}-report.rmd")
+  )
+}
+```
+```text
+species &lt;- "Adelie"
+
+long_prose &lt;- "### Mating\n\nThe mating season begins with the Antarctic spring in October.
+The penguins create nests by piling little stones in circles. 
+Once the egg is laid in December the parents take turns incubating the egg and going to hunt. 
+The parent that stays behind does not eat during their turn with the egg. 
+Once the hatched chick is about 3 weeks old both parents will abandon it, returning to the sea to hunt. 
+The downy chicks gather into a group called a crèche to keep each other warm. 
+They will start to hunt at about 9 weeks old once their down has been replaced with waterproof feathers."
+```
+
+```r
+use_penguin_template(species, long_prose)
+```
+
+---
+
+.pull-left[
+
+### Follow-up reading
+
+* Emily Riederer’s [RMD Driven Development](https://emilyriederer.netlify.app/post/rmarkdown-driven-development/)  
+
+* Sharla Gelfand’s [RMD templating](https://sharla.party/post/usethis-for-reporting/)  
+
+* Thmoas Mock Meta RMarkdown [blogpost](https://themockup.blog/posts/2020-07-25-meta-rmarkdown/)  
+* The fantastic [RMarkdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)  
+
+* RMarkdown [Definitive Guide book](https://bookdown.org/yihui/rmarkdown/)  
+
+* [Rethinking Reporting with Automation](https://www.rstudio.com/resources/webinars/rethink-reporting-with-automation/) within the Insurance Industry  
+
+* Using R to Enhance [Clinical Reporting](https://www.rstudio.com/resources/webinars/using-r-to-drive-agility-in-clinical-reporting/) within the Life Sciences industry  
+
+
+* One of my favorites, [Avoid Dashboard Fatigue](https://www.rstudio.com/resources/webinars/avoid-dashboard-fatigue/)]
+
+.pull-right[
+
+![Mr.Bean](https://c.tenor.com/BWJ3hSsw0wkAAAAC/bean-reading.gif)
 ]
 
 ---
