@@ -33,8 +33,7 @@ class: middle
 - Introduction 
 - my fav tool
 - not purely beginner tutorial, some advanced
-- back and forth: presentation vs. live demo 
-- compare to jupyter 
+- back and forth: presentation vs. live demo
 
 ---
 
@@ -47,7 +46,9 @@ class: middle
 ]
 
 .pull-right[
-![](images/youtube-screenshot.png)
+
+### "Advanced R Markdown"
+!["Advanced R Markdown"](images/youtube-screenshot.png)
 ]
 
 ???
@@ -180,8 +181,6 @@ All together a total &lt;span style="color:red;font-weight:bold"&gt;52&lt;/span&
 * Books via `bookdown`
 * HTMLWidgets - `DT`, `reactable`, `plotly`, `crosstalk` and more. 
 
-
-
 ???
 - surprising
 
@@ -208,6 +207,11 @@ All together a total &lt;span style="color:red;font-weight:bold"&gt;52&lt;/span&
 .pull-right[
 ![](images/Squid_Game_Old_Man_Sitting_Meme_Template.jpeg)
 ]
+
+???
+- biggest take-away from the live stream
+- multiple RMD referencing R, mutliple R scripts
+
 ---
 
 ### Reference .R files
@@ -286,6 +290,9 @@ smaller %&gt;%
 
 ???
 - generate reports for each params 
+- an opportunity for third-person view point. 
+- whole picture of the pipeline 
+- workflow 
 
 ---
 
@@ -404,6 +411,9 @@ Uses report code only if specific condition is met.
 
 ???
 - outlier report 
+- certain threshold 
+- re-use part of different files 
+- incentives us to write general, abstract 
 
 ---
 
@@ -476,7 +486,7 @@ class:middle
 .pull-left[
 ## Templating 
 
-Generate input/output templates 
+Generate input templates or output documents from code. 
 
 ]
 
@@ -599,6 +609,7 @@ Gentoo-report.html
 
 ???
 - extend to different combination of certain threshold 
+- changing time 
 - for different models 
 
 ---
@@ -722,6 +733,7 @@ whisker::whisker.render('There are {{nrow(mtcars)}} rows in the mtcars dataset')
 - never used whisker before 
 - whisker: logicless, not interpreting the expression but using the variable
 - where whisker is great is generating .rmd file 
+- generate new input files from input files 
 
 ---
 
@@ -840,7 +852,7 @@ use_penguin_template(species, long_prose)
 * Using R to Enhance [Clinical Reporting](https://www.rstudio.com/resources/webinars/using-r-to-drive-agility-in-clinical-reporting/) within the Life Sciences industry  
 
 
-* One of my favorites, [Avoid Dashboard Fatigue](https://www.rstudio.com/resources/webinars/avoid-dashboard-fatigue/)]
+* One of my favorites, [Julia Silge](https://juliasilge.com)]
 
 .pull-right[
 

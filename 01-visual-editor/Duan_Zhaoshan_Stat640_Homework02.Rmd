@@ -32,10 +32,6 @@ Set gradient vector to 0 and solve for $\sigma$: \begin{align}\nabla \ell (\sigm
 \hat{\sigma}_{mle} & = \frac{\sqrt{\sum (x_i - \mu)^2}}{n}
 \end{align}
 
-$$
-f(x) = \frac{1}{}
-$$
-
 ## b.
 
 Using the same log-likelihood function, we take the derivative with respect to $\mu$: \begin{align}\nabla \ell (\mu) & = \frac{\partial \ell (\mu, \sigma^2)}{\partial \mu} \\ & = \frac{\sum_{i=1}^n(x_i - \mu)}{\sigma^2}\end{align}
@@ -95,10 +91,6 @@ ggplot(data.frame(x = c(0, 60)), aes(x = x)) +
 ```
 
 Incorrect !
-
-Need to use Jacobian
-
-![](images/hw2_20.jpg)
 
 \newpage
 
