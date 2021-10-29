@@ -1,9 +1,9 @@
 ---
 title: "Important Penguin Analysis"
 output:
+  pdf_document: default
   html_document:
-    theme:
-      yeti
+    theme: yeti
     code_folding: show
 ---
 

@@ -12,7 +12,7 @@ rmarkdown::render(
 rstudioapi::viewer("04-templating/penguin-params.html")
 
 rmarkdown::render(
-  "04-templating/penguin-params.Rmd",
+  "/04-templating/penguin-params.Rmd",
   params = list(species = "Chinstrap"),
   output_file = "choose-chinstrap.html"
 )
@@ -56,4 +56,5 @@ tibble(files = paste0("04-templating/", output_files)) %>%
   ) %>% 
   unpack(file_info) %>% 
   select(files, mtime, now)
+
 

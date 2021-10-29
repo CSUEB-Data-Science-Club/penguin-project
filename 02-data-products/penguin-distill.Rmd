@@ -12,7 +12,6 @@ output:
     toc_depth: 4
 ---
 
-
 ![Diagram of penguin head with indication of bill length and bill depth.](https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png)
 
 ```{r setup, include=FALSE}
@@ -26,8 +25,7 @@ library(bslib) # need to install
 
 ### Literate Programming
 
-Per [Donald Knuth](https://en.wikipedia.org/wiki/Literate_programming
-) 
+Per [Donald Knuth](https://en.wikipedia.org/wiki/Literate_programming)
 
 > A programming paradigm introduced by Donald Knuth in which a computer program is given an explanation of its logic in a natural language, such as English, interspersed with snippets of macros and traditional source code, from which compilable source code can be generated.
 
@@ -47,13 +45,14 @@ penguins %>%
   skimr::skim() %>% 
   select(-contains("numeric.p"))
 ```
----
+
+------------------------------------------------------------------------
 
 ### Specific statistics
 
-We can also explore specific statistics 
+We can also explore specific statistics
 
-The penguins split by species  show a specific relationship between weight and flipper length, where the Adelie female penguins are the lighest and have the shortest flippers.
+The penguins split by species show a specific relationship between weight and flipper length, where the Adelie female penguins are the lighest and have the shortest flippers.
 
 ```{r}
 penguins %>% 
@@ -89,7 +88,6 @@ penguins_clean <- penguins %>%
   mutate(species_num = as.numeric(species))
 ```
 
-
 ### Plot Section
 
 Let's move on to some plots, for the overall distributions and for just the Adelie penguins. The overall distribution of the data by species shows some overlap in body weight for Adelie/Chinstrap, but more of a separation for the Gentoo penguins.
@@ -101,6 +99,7 @@ penguins %>%
   scale_fill_manual(values = c("darkorange","purple","cyan4")) +
   labs(x = "Penguin Bins")
 ```
+
 When we compare just within the Adelie penguins, we can see more of a specific separation of male vs female. However, there is still a decent amount of overlapping data.
 
 ```{r}
@@ -127,7 +126,7 @@ penguin_size_plot <- penguins_clean %>%
 penguin_size_plot
 ```
 
-We can save the overall distribution and the linear model plot. 
+We can save the overall distribution and the linear model plot.
 
 ```{r}
 ggsave("penguin-dist.png", penguin_plot, 
@@ -176,4 +175,4 @@ model_metrics %>%
 
 Overall, this was a quick overview of the beauty of literate programming. We have R code that is self-documenting, as we capture our thoughts and the outputs in a single document. We know at some level that the code works since it "logs" the outputs at various stages and could still output to additional log files. To render it has to run successfully in a linear fashion, and it is human readable as code, via the visual editor or even in version control like Git!
 
----
+------------------------------------------------------------------------
